@@ -32,6 +32,7 @@
     <orderEntry type="library" scope="PROVIDED" name="actionmailer (v5.1.7, asdf: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionpack (v5.1.7, asdf: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionview (v5.1.7, asdf: 2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="activeform-rails (v0.0.5, asdf: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activejob (v5.1.7, asdf: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activemodel (v5.1.7, asdf: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v5.1.7, asdf: 2.3.1) [gem]" level="application" />
@@ -77,6 +78,7 @@
     <orderEntry type="library" scope="PROVIDED" name="mini_portile2 (v2.4.0, asdf: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="minitest (v5.14.2, asdf: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_xml (v0.6.0, asdf: 2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mysql2 (v0.5.2, asdf: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nio4r (v2.5.2, asdf: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.10.10, asdf: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="public_suffix (v4.0.6, asdf: 2.3.1) [gem]" level="application" />

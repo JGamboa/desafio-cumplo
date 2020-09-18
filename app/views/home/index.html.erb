@@ -1,0 +1,18 @@
+<%= form_for :body, :url => { :action => :get_tmc } do |f| %>
+  <%= f.label(:amount, "Monto: ") %>
+  <%= f.text_field(:amount) %>
+
+  <%= f.label(:days, "Plazo: ") %>
+  <%= f.text_field(:days) %>
+
+  <%= f.label(:tmc_date, "Fecha: ") %>
+  <%= f.date_field(:tmc_date) %>
+
+  <%= f.submit "Consultar TMC" %>
+<% end %>
+
+<% if defined?(errors) && errors.full_messages.any? %>
+  <% errors.full_messages.each do |error_message| %>
+    <span style="color: red"><%= error_message %></span> <br />
+  <% end %>
+<% end %>
