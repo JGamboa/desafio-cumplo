@@ -5,8 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'mysql2', '~> 0.5.2'
-
 gem 'activeform-rails'
 
 gem 'httparty', '~> 0.13.7'
