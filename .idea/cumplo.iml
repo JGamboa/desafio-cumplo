@@ -114,6 +114,7 @@
     <orderEntry type="library" scope="PROVIDED" name="websocket-driver (v0.6.5, asdf: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-extensions (v0.1.5, asdf: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="xpath (v2.1.0, asdf: 2.3.1) [gem]" level="application" />
+    <orderEntry type="library" name="tailwindcss" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />

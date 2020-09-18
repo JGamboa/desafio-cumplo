@@ -1,18 +1,37 @@
-<%= form_for :body, :url => { :action => :get_tmc } do |f| %>
-  <%= f.label(:amount, "Monto: ") %>
-  <%= f.text_field(:amount) %>
 
-  <%= f.label(:days, "Plazo: ") %>
-  <%= f.text_field(:days) %>
+<div class="w-full mx-auto max-w-xs mt-5">
+  <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <span class="block text-gray-700 text-sm font-bold mb-2">Ingrese datos de crédito</span>
 
-  <%= f.label(:tmc_date, "Fecha: ") %>
-  <%= f.date_field(:tmc_date) %>
+  <%= form_for :body, :url => { :action => :get_tmc }, class: 'bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4' do |f| %>
 
-  <%= f.submit "Consultar TMC" %>
-<% end %>
+    <div class="mb-4">
+      <%= f.label(:amount, "Monto: ", class: 'block text-gray-700 text-sm font-bold mb-2') %>
+      <%= f.text_field(:amount, class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline') %>
 
-<% if defined?(errors) && errors.full_messages.any? %>
-  <% errors.full_messages.each do |error_message| %>
-    <span style="color: red"><%= error_message %></span> <br />
+    </div>
+
+    <div class="mb-6">
+      <%= f.label(:days, "Plazo: ", class: 'block text-gray-700 text-sm font-bold mb-2') %>
+      <%= f.text_field(:days, class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline') %>
+    </div>
+
+    <div class="mb-6">
+      <%= f.label(:tmc_date, "Fecha: ", class: 'block text-gray-700 text-sm font-bold mb-2') %>
+      <%= f.date_field(:tmc_date, class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline') %>
+    </div>
+
+    <%= f.submit "Consultar TMC", class: 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' %>
   <% end %>
-<% end %>
+
+  <p class="text-center text-gray-500 text-xs mt-5 mb-4">
+    &copy;2020 Joaquín Gamboa. All rights reserved.
+  </p>
+
+  <% if defined?(errors) && errors.full_messages.any? %>
+    <% errors.full_messages.each do |error_message| %>
+      <span style="color: red"><%= error_message %></span> <br />
+    <% end %>
+  <% end %>
+  </div>
+</div>

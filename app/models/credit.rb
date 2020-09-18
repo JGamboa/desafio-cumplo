@@ -18,8 +18,7 @@ class Credit
   def get_tmc
     operation = OperationType.get_operation_type(self.days.to_i, self.amount.to_f)
     date = Date.parse(self.tmc_date)
-    tmcs = SbifWebservice.get_tmc_indicator(date.day.to_i, date.month.to_i, date.year.to_i)
-
+    tmcs = SbifWebservice.get_tmc_indicator(date)
     filtered_tmcs = tmcs["TMCs"].select do | tmc |
       parsed_from = Date.parse(tmc["Fecha"])
       tmc["Tipo"].to_i == operation["type"] &&
@@ -28,7 +27,16 @@ class Credit
           Date.parse(tmc["Hasta"]) >= date
     end
 
-    return filtered_tmcs[0]
+    if filtered_tmcs.size == 0
+      filtered_tmcs = tmcs["TMCs"].select do | tmc |
+        parsed_from = Date.parse(tmc["Fecha"])
+        tmc["Tipo"].to_i == operation["type"] &&
+            parsed_from <= date &&
+            !tmc.key?("Hasta")
+      end
+    end
+
+  return filtered_tmcs[0]
   end
 
 end
