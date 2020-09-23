@@ -24,9 +24,7 @@ class OperationType
         amount > lp[0]['ufd'] && amount <= lp[0]['ufh']
       end
     end
-    puts operations
 
-
-    return operations[0][0]
+    operations[0][0]
   end
 end

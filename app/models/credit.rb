@@ -6,12 +6,12 @@ class Credit
   validates :amount, presence: true,  numericality: { only_integer: false, greater_than: 0 }
   validates :days, presence: true,  numericality: { only_integer: true, greater_than: 0 }
   validates :tmc_date, presence: true
-  validate :validate_tmc_date
+  validates :validate_tmc_date, acceptance: {message: 'Fecha incorrecta'}
 
   def initialize(attributes = {})
     attributes.each do |name, value|
       send("#{name}=", value)
-    end
+    end rescue nil
   end
 
   def persisted?
@@ -21,9 +21,11 @@ class Credit
   def validate_tmc_date
     begin
       Date.parse(self.tmc_date)
-      return true
+      nil
+    rescue Exception
+      false
     rescue ArgumentError
-      return false
+      false
     end
   end
 
